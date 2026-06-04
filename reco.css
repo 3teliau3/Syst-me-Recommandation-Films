@@ -1,0 +1,118 @@
+.title-left {
+     text-align: left;
+     color: rgb(207, 5, 5) !important;
+     font-size: 36px !important;
+     margin-bottom: 10px !important;
+     font-weight: 700 !important;
+     font-family: Helvetica !important;
+}
+
+.title-center {
+     text-align: center;
+     color: white !important;
+     font-size: 48px !important;
+     margin-bottom: 60px;
+}
+
+.question-title {
+     font-size: 18px;
+     color: white !important;
+     font-weight: 32px !important;
+     margin-bottom: 5px !important;
+}
+
+.movies_title {
+     color: white;
+     font-size: 15px;
+     margin-top: 8px;
+     text-align: center;
+     font-weight: bold;
+}
+
+.spe_title {
+     color: white !important;
+     font-size: 48px;
+     text-align: center;
+     margin-bottom: 20px;
+}
+
+.date {
+     font-size: 16px !important;
+     color: white;
+     text-align: left;
+     margin-top: 20px !important;
+}
+
+.time {
+     font-size: 16px !important;
+     color: white;
+     text-align: left;
+     margin-top: 0px !important;
+     margin-bottom: 2px !important;
+}
+
+.note {
+     font-size: 16px !important;
+     color: white;
+     text-align: left;
+     margin-top: 0px !important;
+     margin-bottom: 2px !important;
+}
+
+.genres {
+     font-size: 14px !important;
+     color: white;
+     text-align: right;
+     margin-top: 20px !important;
+}
+
+.description {
+     margin-top: 20px;
+     font-size: 14px !important;
+     color: white;
+     margin-top: 15px !important;
+}
+
+.avis_title {
+     color: white !important;
+     font-size: 38px;
+     text-align: center;
+     margin-top: 120px;
+}
+
+.slider_avis_title {
+     font-size: 16px !important;
+     color: white;
+     text-align: left;
+     margin-top: 8px !important;
+}
+
+.top_fr {
+     font-size: 32px !important;
+     color: white;
+     text-align: left;
+     margin-top: 0px !important;
+     margin-bottom: 5px !important;
+}
+
+.card {
+    background: #420f0f;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px #420f0f}
+
+.title-etude{
+     text-align: left;
+     color: rgb(207, 5, 5) !important;
+     font-size: 25px !important;
+     margin-bottom: 10px !important;
+     font-weight: 700 !important;
+     font-family: Helvetica !important;
+}
+
+.stButton > button {
+    border-radius: 15px;
+    background-color: #420f0f78;
+    color: white;
+    border: none;
+}

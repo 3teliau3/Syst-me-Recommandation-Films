@@ -116,3 +116,40 @@
     color: white;
     border: none;
 }
+
+.shape-red {
+    position: fixed;
+
+    width: 600px;
+    height: 600px;
+
+    top: -200px;
+    right: -150px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(229,9,20,0.4),
+            transparent 70%
+        );
+
+    filter: blur(80px);
+
+    z-index: 0;
+}
+
+.Name_menu {
+    position: sticky;
+
+    top: 15px;
+    left: 30px;
+
+    color: rgb(207, 5, 5);
+
+    font-size: 32px;
+    font-weight: 900;
+
+    z-index: 999999;
+
+    letter-spacing: 2px;
+}

@@ -123,13 +123,102 @@ with st.sidebar:
     )
 
 # ==============================================================
-#       PAGE RECO DE SIDE BAR
+#       STYLE DE PAGE
 # ==============================================================
 st.set_page_config(
     page_title="Reco",
     layout="wide"
     )
+
+st.markdown("""
+<style>
+.stApp {
+    background: #050816;
+    overflow: hidden;
+}
+
+.stApp::before {
+    content: "";
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    background: rgba(229,9,20,0.15);
+    border-radius: 50%;
+    top: -150px;
+    right: -100px;
+    filter: blur(120px);
+    z-index: -1;
+}
+
+.stApp::after {
+    content: "";
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 50%;
+    bottom: -100px;
+    left: -100px;
+    filter: blur(100px);
+    z-index: -1;
+}
+</style>
+""", unsafe_allow_html=True)
+
+# ==============================================================
+#       PAGE RECO 
+# ==============================================================
+
 if menu == "Recomandation":
+    st.markdown("""
+        <style>
+
+        .logo {
+            position: fixed;
+            top: 100px;
+            left: 330px;
+
+            font-size: 40px;
+            font-weight: bold;
+
+            color: rgb(207, 5, 5);
+
+            z-index: 99999;
+        }
+
+        </style>
+
+        <div class="logo">
+        NETFLIX
+        </div>
+
+        """, unsafe_allow_html=True)
+
+    st.markdown("""
+        <style>
+
+        .Reco {
+            position: sticky;
+            top: 100px;
+            left: 490px;
+
+            font-size: 40px;
+            font-weight: bold;
+
+            color: white;
+
+            z-index: 9999;
+        }
+
+        </style>
+
+        <div class="Reco">
+        Reco
+        </div>
+
+        """, unsafe_allow_html=True)
+
+    st.markdown("""<div class="shape-red"></div>""", unsafe_allow_html=True)
     # ==============================================================
     #   VREIF / INIT  MEMOIRE
     # ==============================================================
@@ -151,9 +240,7 @@ if menu == "Recomandation":
     # ==============================================================
 
     if st.session_state.page == "reco":
-        st.markdown(
-            "<div class='title-left'>Netflix Reco</div>", unsafe_allow_html=True
-        )
+
         st.markdown(
             "<div class='title-center'>Nos Recommandations</div>",
             unsafe_allow_html=True,

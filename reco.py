@@ -170,55 +170,7 @@ st.markdown("""
 # ==============================================================
 
 if menu == "Recomandation":
-    st.markdown("""
-        <style>
 
-        .logo {
-            position: fixed;
-            top: 100px;
-            left: 330px;
-
-            font-size: 40px;
-            font-weight: bold;
-
-            color: rgb(207, 5, 5);
-
-            z-index: 99999;
-        }
-
-        </style>
-
-        <div class="logo">
-        NETFLIX
-        </div>
-
-        """, unsafe_allow_html=True)
-
-    st.markdown("""
-        <style>
-
-        .Reco {
-            position: sticky;
-            top: 100px;
-            left: 490px;
-
-            font-size: 40px;
-            font-weight: bold;
-
-            color: white;
-
-            z-index: 9999;
-        }
-
-        </style>
-
-        <div class="Reco">
-        Reco
-        </div>
-
-        """, unsafe_allow_html=True)
-
-    st.markdown("""<div class="shape-red"></div>""", unsafe_allow_html=True)
     # ==============================================================
     #   VREIF / INIT  MEMOIRE
     # ==============================================================
@@ -240,6 +192,20 @@ if menu == "Recomandation":
     # ==============================================================
 
     if st.session_state.page == "reco":
+
+        st.markdown("""<div class="shape-red-right"></div>""", unsafe_allow_html=True)
+
+        st.markdown("""
+        <div class="logo">
+        NETFLIX
+        </div>
+        """, unsafe_allow_html=True)
+
+        st.markdown("""
+        <div class="Reco">
+        Reco
+        </div>
+        """, unsafe_allow_html=True)
 
         st.markdown(
             "<div class='title-center'>Nos Recommandations</div>",
@@ -306,6 +272,9 @@ if menu == "Recomandation":
 
     if st.session_state.page == "avis":
 
+        st.markdown("""<div class="shape-red-right"></div>""", unsafe_allow_html=True)
+        st.markdown("""<div class="shape-red-left"></div>""", unsafe_allow_html=True)
+
         infos = st.session_state.movies_infos
 
         st.markdown(
@@ -331,6 +300,14 @@ if menu == "Recomandation":
     # ==============================================================
 
     if st.session_state.page == "infos":
+
+        st.markdown("""<div class="shape-red-right"></div>""", unsafe_allow_html=True)
+
+        st.markdown("""
+        <div class="logo_sticky">
+        NETFLIX
+        </div>
+        """, unsafe_allow_html=True)
 
         infos = st.session_state.movies_infos
 
@@ -378,15 +355,19 @@ if menu == "Recomandation":
             )
 
         if pd.notna(infos["overview"]):
+            st.write("_______________________________________________________________________________________________________________")
             st.markdown(
                 f"<div class='description'>{translate(infos['overview'])}</div>",
                 unsafe_allow_html=True,
             )
+            st.write("_______________________________________________________________________________________________________________")
         if pd.isna(infos["overview"]):
+            st.write("_______________________________________________________________________________________________________________")
             st.markdown(
                 f"<div class='spe_title'>Pas de description</div>",
                 unsafe_allow_html=True,
             )
+            st.write("_______________________________________________________________________________________________________________")
         st.markdown(
             "<div style='height: 30px;'></div>",
             unsafe_allow_html=True)
@@ -467,6 +448,15 @@ if menu == "A la Une":
 
     if st.session_state.page2 == "top":
 
+        st.markdown("""
+            <div class="logo">
+            NETFLIX
+            </div>
+            """, unsafe_allow_html=True)
+
+        st.markdown("""<div class="trophy"></div>""", unsafe_allow_html=True)
+        st.markdown("""<div class="trophy-left"></div>""", unsafe_allow_html=True)
+
         # ==============================================================
         #    BDD  TOP FILM
         # ==============================================================
@@ -486,7 +476,7 @@ if menu == "A la Une":
             f"<div class= 'title-center'>Top des films<div>", unsafe_allow_html=True
         )
         st.markdown(
-            f"<div class= 'title-left'>Top des films en France<div>",
+            f"<div class= 'title-etude'>Top des films en France<div>",
             unsafe_allow_html=True,
         )
 
@@ -540,7 +530,7 @@ if menu == "A la Une":
             unsafe_allow_html=True)
 
         st.markdown(
-            f"<div class= 'title-left'>Top des films par genres<div>",
+            f"<div class= 'title-etude'>Top des films par genres<div>",
             unsafe_allow_html=True,
         )
 
@@ -580,6 +570,9 @@ if menu == "A la Une":
 
     if st.session_state.page2 == "avis":
 
+        st.markdown("""<div class="shape-red-right"></div>""", unsafe_allow_html=True)
+        st.markdown("""<div class="shape-red-left"></div>""", unsafe_allow_html=True)
+
         infos = st.session_state.movies_infos
 
         st.markdown(
@@ -605,6 +598,14 @@ if menu == "A la Une":
     # ==============================================================
 
     if st.session_state.page2 == "infos":
+
+        st.markdown("""
+            <div class="logo_sticky">
+            NETFLIX
+            </div>
+            """, unsafe_allow_html=True)
+        
+        st.markdown("""<div class="shape-red-right"></div>""", unsafe_allow_html=True)
 
         infos = st.session_state.movies_infos
 
@@ -648,15 +649,19 @@ if menu == "A la Une":
             )
 
         if pd.notna(infos["overview"]):
+            st.write("_______________________________________________________________________________________________________________")
             st.markdown(
                 f"<div class='description'>{translate(infos['overview'])}</div>",
                 unsafe_allow_html=True,
             )
+            st.write("_______________________________________________________________________________________________________________")
         if pd.isna(infos["overview"]):
+            st.write("_______________________________________________________________________________________________________________")
             st.markdown(
                 f"<div class='spe_title'>Pas de description</div>",
                 unsafe_allow_html=True,
             )
+            st.write("_______________________________________________________________________________________________________________")
         st.markdown(
             "<div style='height: 30px;'></div>",
             unsafe_allow_html=True)
@@ -715,6 +720,10 @@ if menu == "A la Une":
 #    PAGE KPI
 # ==============================================================
 if menu == "KPI":
+
+    st.markdown("""<div class="film-reel-left"></div>""", unsafe_allow_html=True)
+    st.markdown("""<div class="film-reel"></div>""", unsafe_allow_html=True)
+
     st.markdown(
             "<div class='title-center'>Participation des utilisateurs</div>",
             unsafe_allow_html=True,
@@ -726,9 +735,11 @@ if menu == "KPI":
     st.markdown(
         "<div class='title-etude'>Compréhension et exploitation des notes</div>", unsafe_allow_html=True
         )
+    st.write("_______________________________________________________________________________________________________________")
     st.markdown("""Dans le cadre de l’élaboration de notre système de recommandation, nous cherchons à 
                 comprendre la signification et l’impact des notes attribuées par les utilisateurs, dans 
                 un but de compréhension et d’amélioration du système.""")
+    st.write("_______________________________________________________________________________________________________________")
 
     
     # ==============================================================
@@ -1003,7 +1014,7 @@ if menu == "KPI":
         plot_bgcolor="#121212",
         font=dict(color="white")
     )
-
+    st.write("_______________________________________________________________________________________________________________")
     st.markdown("""L’un des objectifs est d’identifier les genres de films les plus engageants pour 
                 les spectateurs, en fonction du volume de retours générés. Cette analyse est comparée 
                 à la répartition des genres les plus produits afin de déterminer les catégories sur 

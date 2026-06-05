@@ -1,12 +1,3 @@
-.title-left {
-     text-align: left;
-     color: rgb(207, 5, 5) !important;
-     font-size: 36px !important;
-     margin-bottom: 10px !important;
-     font-weight: 700 !important;
-     font-family: Helvetica !important;
-}
-
 .title-center {
      text-align: center;
      color: white !important;
@@ -117,7 +108,7 @@
     border: none;
 }
 
-.shape-red {
+.shape-red-right {
     position: fixed;
 
     width: 600px;
@@ -138,18 +129,298 @@
     z-index: 0;
 }
 
-.Name_menu {
-    position: sticky;
+/*==============================================================*/
+/*                        SHAPE                                 */
+/*==============================================================*/
 
-    top: 15px;
-    left: 30px;
+.shape-red-left {
+    position: fixed;
 
-    color: rgb(207, 5, 5);
+    width: 600px;
+    height: 600px;
 
-    font-size: 32px;
-    font-weight: 900;
+    top: -200px;
+    left: 150px; 
 
-    z-index: 999999;
+    background:
+        radial-gradient(
+            circle,
+            #e5091466,
+            transparent 70%
+        );
 
-    letter-spacing: 2px;
+    filter: blur(80px);
+
+    z-index: 10;
 }
+
+.logo {
+     position: fixed;
+     top: 100px;
+     left: 330px;
+
+     font-size: 40px;
+     font-weight: bold;
+
+     color: rgb(207, 5, 5);
+
+     z-index: 99999;
+}
+
+.Reco {
+     position: sticky;
+     top: 100px;
+     left: 490px;
+
+     font-size: 40px;
+     font-weight: bold;
+
+     color: white;
+
+     z-index: 9999;
+}
+
+.logo_sticky {
+     position: sticky;
+     top: 100px;
+     left: 330px;
+
+     font-size: 40px;
+     font-weight: bold;
+
+     color: rgb(207, 5, 5);
+
+     z-index: 99999;
+}
+
+.film-reel {
+    position: fixed;
+
+    width: 520px;
+    height: 520px;
+
+    bottom: -220px;
+    right: -250px;
+
+    border-radius: 50%;
+
+    /* disque principal */
+    background:
+        /* centre */
+        radial-gradient(circle,
+            rgba(0,0,0,0.9) 0 60px,
+            transparent 61px
+        ),
+
+        /* anneau principal */
+        radial-gradient(circle,
+            transparent 120px,
+            rgba(229,9,20,0.35) 121px 160px,
+            transparent 161px
+        ),
+
+        /* second anneau */
+        radial-gradient(circle,
+            transparent 200px,
+            rgba(229,9,20,0.25) 201px 240px,
+            transparent 241px
+        ),
+
+        /* trous de bobine (effet perforation) */
+        repeating-conic-gradient(
+            from 0deg,
+            rgba(229,9,20,0.4) 0deg 8deg,
+            transparent 8deg 30deg
+        );
+
+    opacity: 0.22;
+
+    filter: blur(1.5px);
+
+    z-index: 1;
+
+    pointer-events: none;
+
+     animation: spin 10s linear infinite;
+}
+
+
+.film-reel-left {
+    position: fixed;
+
+    width: 520px;
+    height: 520px;
+
+    top: 40px;
+
+    left: 240px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle,
+            rgba(0,0,0,0.9) 0 60px,
+            transparent 61px
+        ),
+
+        radial-gradient(circle,
+            transparent 120px,
+            rgba(229,9,20,0.35) 121px 160px,
+            transparent 161px
+        ),
+
+        radial-gradient(circle,
+            transparent 200px,
+            rgba(229,9,20,0.25) 201px 240px,
+            transparent 241px
+        ),
+
+        repeating-conic-gradient(
+            from 0deg,
+            rgba(229,9,20,0.4) 0deg 8deg,
+            transparent 8deg 30deg
+        );
+
+    opacity: 0.22;
+
+    filter: blur(1.5px);
+
+    z-index: 0;
+
+    pointer-events: none;
+
+    animation: spin 40s linear infinite;
+}
+
+.trophy {
+    position: fixed;
+
+    width: 400px;
+    height: 500px;
+
+    bottom: 0px;
+    right: 40px;
+
+    background:
+        radial-gradient(circle at 50% 20%,
+            rgba(229, 9, 20, 0.479) 0 60px,
+            transparent 61px
+        ),
+        radial-gradient(circle at 50% 50%,
+            rgba(229, 9, 20, 0.717) 0 140px,
+            transparent 141px
+        ),
+        radial-gradient(circle at 50% 85%,
+            rgba(203, 11, 11, 0.782) 0 60px,
+            transparent 61px
+        );
+
+    opacity: 0.18;
+
+    filter: blur(1px);
+
+    z-index: 0;
+
+    pointer-events: none;
+
+    animation: glow 5s ease-in-out infinite;
+}
+
+.trophy-left {
+    position: fixed;
+
+    width: 400px;
+    height: 500px;
+
+    top: 0px;
+    left: 240px;
+
+    background:
+        radial-gradient(circle at 50% 20%,
+            rgba(229, 9, 20, 0.717) 0 140px,
+            transparent 61px
+        ),
+        radial-gradient(circle at 50% 85%,
+            rgba(203, 11, 11, 0.782) 0 60px,
+            transparent 61px
+        );
+
+    opacity: 0.18;
+
+    filter: blur(1px);
+
+    z-index: 0;
+
+    pointer-events: none;
+
+    animation: glow 5s ease-in-out infinite;
+}
+
+.cinema-light {
+    position: fixed;
+
+    width: 800px;
+    height: 800px;
+
+    top: 20px;
+    left: 240px;
+
+    pointer-events: none;
+
+    z-index: 0;
+
+    background: radial-gradient(circle at 30% 30%,
+        rgba(229,9,20,0.5) 0%,
+        rgba(229,9,20,0.2) 25%,
+        rgba(229,9,20,0.08) 45%,
+        transparent 70%
+    );
+
+    filter: blur(50px);
+
+    animation: pulseLight 2s ease-in-out infinite;
+}
+
+/*==============================================================*/
+/*                        ANIMATION                             */
+/*==============================================================*/
+
+@keyframes spin {
+from {
+     transform: rotate(0deg);
+}
+to {
+     transform: rotate(360deg);
+}
+}
+
+@keyframes glow {
+    0% {
+        opacity: 0.18;
+        filter: blur(2px) drop-shadow(0 0 10px rgba(229,9,20,0.2));
+    }
+    50% {
+        opacity: 0.28;
+        filter: blur(1px) drop-shadow(0 0 25px rgba(229,9,20,0.4));
+    }
+    100% {
+        opacity: 0.18;
+        filter: blur(2px) drop-shadow(0 0 10px rgba(229,9,20,0.2));
+    }
+}
+
+@keyframes pulseLight {
+    0% {
+        transform: scale(1);
+        opacity: 0.3;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.55;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.3;
+    }
+}
+

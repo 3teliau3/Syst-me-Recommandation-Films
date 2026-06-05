@@ -273,7 +273,7 @@ if menu == "Recomandation":
     if st.session_state.page == "avis":
 
         st.markdown("""<div class="shape-red-right"></div>""", unsafe_allow_html=True)
-        st.markdown("""<div class="shape-red-left"></div>""", unsafe_allow_html=True)
+        st.markdown("""<div class="cinema-light"></div>""", unsafe_allow_html=True)
 
         infos = st.session_state.movies_infos
 

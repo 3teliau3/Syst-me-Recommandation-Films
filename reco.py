@@ -27,12 +27,12 @@ load_css("reco.css")
 
 @st.cache_data
 def load_csv():
-    return pd.read_csv("movies_ml_v5.csv")
+    return pd.read_csv("movies_ml_v6.csv")
 
 
 @st.cache_data
 def prep_X(dataFrame):
-    X = dataFrame["NLP"]
+    X = dataFrame["NLP_ML"]
     tfidf = TfidfVectorizer(stop_words="english")
     X_tfidf = tfidf.fit_transform(X)
     return X_tfidf
@@ -802,7 +802,7 @@ if menu == "KPI":
             "xanchor": "center",
             "font": {"size": 25}
             },
-        xaxis_title= "Décenie",
+        xaxis_title= "Décennie",
         yaxis_title= "Budget",
         paper_bgcolor= "#0e1117",
         plot_bgcolor="#121212",
